@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1F2E25">
+    <title>Angimen Holding · Selector de propuestas</title>
+    <meta name="description" content="Tres propuestas de diseño para Angimen Holding. Elige la que prefieras.">
+    <meta name="robots" content="noindex,nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400;500;600&display=swap">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231F2E25'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='18' fill='%23B8956B' text-anchor='middle' font-style='italic'%3EAH%3C/text%3E%3C/svg%3E">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #14110C;
+    color: #F0EDE8;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.serif { font-family: 'Cormorant Garamond', serif; }
+
+/* HEADER */
+.head {
+    text-align: center;
+    padding: 80px 24px 40px;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.head .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    letter-spacing: .14em;
+    color: #F0EDE8;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.head .brand em { font-style: italic; color: #C4956A; font-weight: 400; text-transform: lowercase; letter-spacing: .04em; }
+.head .eyebrow {
+    font-size: 11px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: #C4956A;
+    margin-bottom: 26px;
+    display: block;
+}
+.head h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 26px;
+    color: #F0EDE8;
+}
+.head h1 em { font-style: italic; color: #C4956A; }
+.head p {
+    font-size: 16px;
+    color: rgba(240,237,232,.65);
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* GRID 3 OPCIONES */
+.options-grid {
+    max-width: 1480px;
+    margin: 60px auto 100px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+.option {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #1F1F1F;
+    cursor: pointer;
+    transition: transform .5s ease;
+    border: 1px solid rgba(240,237,232,.08);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.option:hover { transform: translateY(-6px); }
+.option-img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity .5s ease;
+}
+.option-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(15,12,9,.95) 100%);
+}
+.option-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 36px 32px;
+    color: #F0EDE8;
+}
+.option-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.option-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: #C4956A;
+    line-height: 1;
+}
+.option-tag {
+    font-size: 9px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: rgba(240,237,232,.6);
+    background: rgba(15,12,9,.4);
+    padding: 6px 12px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(240,237,232,.15);
+}
+.option-bottom { }
+.option-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+}
+.option-name em { font-style: italic; color: #C4956A; }
+.option-desc {
+    font-size: 13px;
+    color: rgba(240,237,232,.7);
+    line-height: 1.65;
+    margin-bottom: 20px;
+    max-width: 320px;
+}
+.option-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 24px;
+    font-size: 11px;
+    color: rgba(240,237,232,.55);
+    letter-spacing: .04em;
+}
+.option-meta-row { display: flex; gap: 8px; }
+.option-meta-key { color: #C4956A; min-width: 70px; letter-spacing: .12em; text-transform: uppercase; font-size: 10px; }
+.option-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-bottom: 1px solid #C4956A;
+    padding-bottom: 6px;
+    align-self: flex-start;
+    transition: color .25s ease, border-color .25s ease;
+}
+.option:hover .option-cta { color: #C4956A; }
+
+/* OPTION-SPECIFIC PALETTE PREVIEW SWATCHES */
+.option-swatches {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+.swatch {
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(240,237,232,.2);
+}
+
+/* OPTION A - Mediterranean Discreet */
+.option-a .option-img { background: linear-gradient(135deg, #4A3F32 0%, #2A2218 50%, #1C1916 100%); }
+
+/* OPTION B - Black Banús */
+.option-b .option-img {
+    background-image: linear-gradient(180deg, rgba(13,13,13,.5) 0%, rgba(13,13,13,.95) 100%), url('assets/img/hero/nomad_night.jpg');
+}
+.option-b .option-img::after { background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,.95) 100%); }
+
+/* OPTION C - Costa Blanca Blueprint */
+.option-c .option-img {
+    background: linear-gradient(135deg, #1B2B4B 0%, #2A3E63 100%);
+}
+
+/* FOOTER */
+.foot {
+    text-align: center;
+    padding: 50px 24px 50px;
+    border-top: 1px solid rgba(240,237,232,.08);
+    color: rgba(240,237,232,.4);
+    font-size: 12px;
+    letter-spacing: .04em;
+}
+.foot a { color: #C4956A; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+.foot a:hover { border-bottom-color: #C4956A; }
+
+/* RESPONSIVE */
+@media (min-width: 720px) {
+    .options-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+    .options-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="head">
+    <div class="brand">ANGIMEN <em>holding</em></div>
+    <span class="eyebrow">— Tres propuestas para tu web —</span>
+    <h1>Tres direcciones visuales,<br><em>una sola web.</em></h1>
+    <p>
+        Hemos preparado tres propuestas de diseño con identidad propia. Cada una está inspirada en
+        las mejores webs internacionales del sector property management luxury. Echa un vistazo a las
+        tres y dinos cuál te encaja mejor.
+    </p>
+</div>
+
+<div class="options-grid">
+
+    <a href="a/" class="option option-a">
+        <div class="option-img"></div>
+        <div class="option-content">
+            <div class="option-top">
+                <span class="option-letter">A</span>
+                <span class="option-tag">Mediterranean Discreet</span>
+            </div>
+            <div class="option-bottom">
+                <div class="option-swatches">
+                    <span class="swatch" style="background:#F5F2ED"></span>
+                    <span class="swatch" style="background:#1C1916"></span>
+                    <span class="swatch" style="background:#8B7355"></span>
+                    <span class="swatch" style="background:#D4C5A9"></span>
+                </div>
+                <h2 class="option-name">Mediterranean<br><em>Discreet</em></h2>
+                <p class="option-desc">Old money quieto. La clase que no necesita gritar. Cuarenta años de trayectoria que se perciben en cada pixel.</p>
+                <div class="option-meta">
+                    <div class="option-meta-row"><span class="option-meta-key">Inspira</span><span>Aman · Oetker · Mamounia</span></div>
+                    <div class="option-meta-row"><span class="option-meta-key">Tipo</span><span>Cormorant Garamond + Lato</span></div>
+                    <div class="option-meta-row"><span class="option-meta-key">Vibe</span><span>Sereno · Mediterráneo</span></div>
+                </div>
+                <span class="option-cta">Ver propuesta A →</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="b/" class="option option-b">
+        <div class="option-img"></div>
+        <div class="option-content">
+            <div class="option-top">
+                <span class="option-letter">B</span>
+                <span class="option-tag">Black Banús Editorial</span>
+            </div>
+            <div class="option-bottom">
+                <div class="option-swatches">
+                    <span class="swatch" style="background:#0D0D0D"></span>
+                    <span class="swatch" style="background:#161616"></span>
+                    <span class="swatch" style="background:#C8A96E"></span>
+                    <span class="swatch" style="background:#F0EDE8"></span>
+                </div>
+                <h2 class="option-name">Black Banús<br><em>Editorial</em></h2>
+                <p class="option-desc">Lujo oscuro contemporáneo. Estética magazine Wallpaper. Champaña, no oro kitsch. Para clientes lifestyle premium.</p>
+                <div class="option-meta">
+                    <div class="option-meta-row"><span class="option-meta-key">Inspira</span><span>Soho House · SHVO</span></div>
+                    <div class="option-meta-row"><span class="option-meta-key">Tipo</span><span>Playfair Display + Inter</span></div>
+                    <div class="option-meta-row"><span class="option-meta-key">Vibe</span><span>Oscuro · Contemporáneo</span></div>
+                </div>
+                <span class="option-cta">Ver propuesta B →</span>
+            </div>
+        </div>
+    </a>
+
+    <a href="c/" class="option option-c">
+        <div class="option-img"></div>
+        <div class="option-content">
+            <div class="option-top">
+                <span class="option-letter">C</span>
+                <span class="option-tag">Costa Blanca Blueprint</span>
+            </div>
+            <div class="option-bottom">
+                <div class="option-swatches">
+                    <span class="swatch" style="background:#FFFFFF"></span>
+                    <span class="swatch" style="background:#1B2B4B"></span>
+                    <span class="swatch" style="background:#C4956A"></span>
+                    <span class="swatch" style="background:#F7F5F1"></span>
+                </div>
+                <h2 class="option-name">Costa Blanca<br><em>Blueprint</em></h2>
+                <p class="option-desc">Arquitectura como identidad. Limpieza técnica + calidez mediterránea. Las tres áreas como diferenciador visual.</p>
+                <div class="option-meta">
+                    <div class="option-meta-row"><span class="option-meta-key">Inspira</span><span>Knight Frank · Drumelia</span></div>
+                    <div class="option-meta-row"><span class="option-meta-key">Tipo</span><span>DM Serif Display + DM Sans</span></div>
+                    <div class="option-meta-row"><span class="option-meta-key">Vibe</span><span>Estructurado · Institucional</span></div>
+                </div>
+                <span class="option-cta">Ver propuesta C →</span>
+            </div>
+        </div>
+    </a>
+
+</div>
+
+<div class="foot">
+    Echa un vistazo a las tres y elige la dirección que más te encaja.<br>
+    Después la pulimos juntos · <a href="mailto:info@angimenholding.com">info@angimenholding.com</a>
+</div>
+
+</body>
+</html>
