@@ -9,11 +9,6 @@
         var y = window.scrollY || window.pageYOffset;
         if (y > 30) topbar.classList.add('is-scrolled');
         else topbar.classList.remove('is-scrolled');
-        if (hero) {
-            var heroBottom = hero.offsetTop + hero.offsetHeight - 80;
-            if (y > heroBottom) topbar.classList.remove('on-hero');
-            else topbar.classList.add('on-hero');
-        }
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -49,6 +44,7 @@
         for (var k = 0; k < fadeEls.length; k++) fadeEls[k].classList.add('is-visible');
     }
 
+    // Portfolio filters
     var fbtns  = document.querySelectorAll('.portfolio-filter');
     var fitems = document.querySelectorAll('.portfolio-item');
     if (fbtns.length && fitems.length) {
@@ -65,6 +61,54 @@
         }
     }
 
+    // LIGHTBOX (ficha proyecto al click sobre portfolio item)
+    var lb       = document.getElementById('lightbox');
+    var lbClose  = document.getElementById('lbClose');
+    var lbImg    = document.getElementById('lbImg');
+    var lbCat    = document.getElementById('lbCat');
+    var lbTitle  = document.getElementById('lbTitle');
+    var lbProj   = document.getElementById('lbProject');
+    var lbLoc    = document.getElementById('lbLoc');
+    var lbWork   = document.getElementById('lbWork');
+    var lbDesc   = document.getElementById('lbDesc');
+
+    function openLb(item) {
+        if (!lb) return;
+        var cat   = item.getAttribute('data-cat')  || '';
+        var name  = item.getAttribute('data-name') || '';
+        var loc   = item.getAttribute('data-loc')  || '';
+        var work  = item.getAttribute('data-work') || '';
+        var desc  = item.getAttribute('data-desc') || '';
+        var img   = item.getAttribute('data-img')  || (item.querySelector('img') && item.querySelector('img').getAttribute('src')) || '';
+        if (lbImg)   lbImg.src = img;
+        if (lbCat)   lbCat.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+        if (lbTitle) lbTitle.textContent = name;
+        if (lbProj)  lbProj.textContent = name;
+        if (lbLoc)   lbLoc.textContent = loc;
+        if (lbWork)  lbWork.textContent = work;
+        if (lbDesc)  lbDesc.textContent = desc;
+        lb.classList.add('is-open');
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLb() {
+        if (!lb) return;
+        lb.classList.remove('is-open');
+        lb.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+    if (lb) {
+        for (var p = 0; p < fitems.length; p++) {
+            fitems[p].addEventListener('click', function () { openLb(this); });
+        }
+        if (lbClose) lbClose.addEventListener('click', closeLb);
+        lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLb();
+        });
+    }
+
+    // FORM submit (mailto fallback)
     var form = document.getElementById('contactForm');
     if (form) {
         form.addEventListener('submit', function (e) {
@@ -74,16 +118,16 @@
             for (var x = 0; x < inputs.length; x++) {
                 if (inputs[x].name) data[inputs[x].name] = inputs[x].value;
             }
-            var subject = encodeURIComponent('Solicitud - ' + (data['project-type'] || 'Consulta'));
+            var subject = encodeURIComponent('Send Project Request - ' + (data['project-type'] || 'Consulta'));
             var bodyParts = [
-                'Nombre: ' + (data.name || ''),
+                'Name: ' + (data.name || ''),
                 'Email: ' + (data.email || ''),
-                'Telefono: ' + (data.phone || ''),
-                'Contacto preferido: ' + (data['contact-method'] || ''),
-                'Tipo de proyecto: ' + (data['project-type'] || ''),
-                'Ubicacion: ' + (data.location || ''),
+                'Phone: ' + (data.phone || ''),
+                'Preferred contact: ' + (data['contact-method'] || ''),
+                'Type of project: ' + (data['project-type'] || ''),
+                'Property location: ' + (data.location || ''),
                 '',
-                'Mensaje:', data.message || ''
+                'Message:', data.message || ''
             ];
             window.location.href = 'mailto:info@angimenholding.com?subject=' + subject + '&body=' + encodeURIComponent(bodyParts.join('\n'));
         });
