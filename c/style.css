@@ -203,10 +203,34 @@ p.lead { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.45; color: var(--te
     cursor: pointer;
     text-align: center;
 }
-.btn-light { background: #FFFFFF; color: #0A0A0A !important; border-color: #FFFFFF; font-weight: 600; }
-.btn-light:hover { background: rgba(255,255,255,.15); color: #FFFFFF !important; border-color: rgba(255,255,255,.5); opacity: 1; }
-.btn-outline-light { background: rgba(0,0,0,.25); color: #FFFFFF !important; border-color: rgba(255,255,255,.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); font-weight: 600; }
-.btn-outline-light:hover { background: #FFFFFF; color: #0A0A0A !important; border-color: #FFFFFF; opacity: 1; }
+.btn-light, .btn-light:hover, .btn-light:focus, .btn-light:active, .btn-light:visited {
+    background: #FFFFFF !important;
+    color: #0A0A0A !important;
+    border-color: #FFFFFF !important;
+    font-weight: 600;
+    text-decoration: none !important;
+    opacity: 1 !important;
+}
+.btn-light:hover, .btn-light:focus {
+    background: #1B1B1B !important;
+    color: #FFFFFF !important;
+    border-color: #1B1B1B !important;
+}
+.btn-outline-light, .btn-outline-light:visited {
+    background: rgba(0,0,0,.4) !important;
+    color: #FFFFFF !important;
+    border-color: rgba(255,255,255,.7) !important;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    font-weight: 600;
+    opacity: 1 !important;
+}
+.btn-outline-light:hover, .btn-outline-light:focus {
+    background: #FFFFFF !important;
+    color: #0A0A0A !important;
+    border-color: #FFFFFF !important;
+    opacity: 1 !important;
+}
 .btn-dark { background: var(--text); color: var(--text-light) !important; border-color: var(--text); }
 .btn-dark:hover { background: transparent; color: var(--text) !important; opacity: 1; }
 .btn-outline-dark { background: transparent; color: var(--text) !important; border-color: var(--text); }
