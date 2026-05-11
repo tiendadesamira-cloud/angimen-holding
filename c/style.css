@@ -89,13 +89,32 @@ p.lead { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.45; color: var(--te
     border-bottom: 1px solid transparent;
     color: var(--text);
 }
-.topbar.is-scrolled { padding: 14px var(--gutter); background: rgba(255,255,255,.96); border-bottom-color: var(--line); }
 .topbar.on-dark-hero { color: var(--text-light); }
 .topbar.on-dark-hero .topbar-brand,
 .topbar.on-dark-hero .topbar-nav a,
 .topbar.on-dark-hero .topbar-langs a,
 .topbar.on-dark-hero .topbar-back-link { color: var(--text-light); }
 .topbar.on-dark-hero .topbar-burger span { background: var(--text-light); }
+/* is-scrolled SIEMPRE pisa on-dark-hero — fondo blanco => texto oscuro */
+.topbar.is-scrolled,
+.topbar.is-scrolled.on-dark-hero {
+    padding: 14px var(--gutter) !important;
+    background: rgba(255,255,255,.96) !important;
+    border-bottom-color: var(--line) !important;
+    color: var(--text) !important;
+}
+.topbar.is-scrolled .topbar-brand,
+.topbar.is-scrolled.on-dark-hero .topbar-brand { color: var(--text) !important; }
+.topbar.is-scrolled .topbar-nav a,
+.topbar.is-scrolled.on-dark-hero .topbar-nav a { color: var(--text) !important; }
+.topbar.is-scrolled .topbar-langs a,
+.topbar.is-scrolled.on-dark-hero .topbar-langs a { color: var(--text) !important; opacity: .55; }
+.topbar.is-scrolled .topbar-langs a.active,
+.topbar.is-scrolled.on-dark-hero .topbar-langs a.active { opacity: 1; }
+.topbar.is-scrolled .topbar-back-link,
+.topbar.is-scrolled.on-dark-hero .topbar-back-link { color: var(--text) !important; border-color: rgba(0,0,0,.15) !important; opacity: .65; }
+.topbar.is-scrolled .topbar-burger span,
+.topbar.is-scrolled.on-dark-hero .topbar-burger span { background: var(--text) !important; }
 .topbar-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .topbar-brand {
     font-family: var(--serif);
