@@ -3,340 +3,503 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0A0A0A">
-    <title>Angimen Holding · Selector de propuestas</title>
-    <meta name="description" content="Tres propuestas de diseño para Angimen Holding. Marbella property management.">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>Angimen Holding · Property Management · Construction · Maintenance · Marbella</title>
+    <meta name="description" content="Más de 40 años gestionando, construyendo, reformando y manteniendo propiedades de alto nivel en Marbella, Puerto Banús y Golden Mile.">
     <meta name="robots" content="noindex,nofollow">
-    <meta property="og:title" content="Angimen Holding — 3 propuestas web">
-    <meta property="og:description" content="Selecciona la dirección visual que más te encaja.">
+
+    <meta property="og:title" content="Angimen Holding — Property Management Marbella">
+    <meta property="og:description" content="Más de 40 años cuidando propiedades de alto nivel en Marbella.">
+    <meta property="og:type" content="website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='16' fill='%23C9A96E' text-anchor='middle' font-style='italic'%3EAH%3C/text%3E%3C/svg%3E">
-
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background: #0A0A0A;
-    color: #F0EDE8;
-    font-weight: 300;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-button { background: none; border: 0; cursor: pointer; font: inherit; color: inherit; }
-
-/* TOPBAR mini */
-.minibar {
-    position: sticky; top: 0; z-index: 50;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px clamp(20px, 4vw, 40px);
-    background: rgba(10,10,10,.92);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(245,237,232,.08);
-}
-.minibar-brand {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    letter-spacing: .14em;
-    color: #F0EDE8;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-.minibar-brand em { font-style: italic; color: #C9A96E; font-weight: 400; text-transform: lowercase; letter-spacing: .04em; }
-.minibar-langs { display: flex; gap: 12px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; }
-.minibar-langs a { padding: 6px 4px; opacity: .55; transition: opacity .25s ease; }
-.minibar-langs a:hover { opacity: 1; }
-.minibar-langs a.active { opacity: 1; color: #C9A96E; border-bottom: 1px solid #C9A96E; }
-
-/* HEAD */
-.head {
-    text-align: center;
-    padding: 90px 24px 50px;
-    max-width: 920px;
-    margin: 0 auto;
-}
-.head .eyebrow {
-    font-size: 11px;
-    letter-spacing: .35em;
-    text-transform: uppercase;
-    color: #C9A96E;
-    margin-bottom: 30px;
-    display: block;
-    font-weight: 500;
-}
-.head h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(38px, 6.5vw, 76px);
-    line-height: 1.05;
-    font-weight: 300;
-    margin-bottom: 30px;
-    color: #F0EDE8;
-}
-.head h1 em { font-style: italic; color: #C9A96E; font-weight: 300; }
-.head p {
-    font-size: clamp(15px, 1.6vw, 17px);
-    color: rgba(240,237,232,.65);
-    max-width: 680px;
-    margin: 0 auto 16px;
-    line-height: 1.75;
-}
-.head-note {
-    margin-top: 38px;
-    padding: 18px 28px;
-    background: rgba(201,169,110,.08);
-    border-left: 2px solid #C9A96E;
-    text-align: left;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 13.5px;
-    color: rgba(240,237,232,.75);
-    font-style: italic;
-}
-.head-note strong { color: #C9A96E; font-style: normal; font-weight: 600; letter-spacing: .04em; }
-
-/* GRID 3 OPCIONES */
-.options-grid {
-    max-width: 1500px;
-    margin: 60px auto 100px;
-    padding: 0 24px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-}
-.option {
-    position: relative;
-    aspect-ratio: 4 / 5;
-    overflow: hidden;
-    background: #1F1F1F;
-    cursor: pointer;
-    transition: transform .5s ease;
-    border: 1px solid rgba(245,237,232,.1);
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-.option:hover { transform: translateY(-6px); }
-.option-img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity .5s ease; }
-.option-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.2) 0%, rgba(10,10,10,.92) 100%); }
-.option-content { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; padding: 36px 32px; color: #F0EDE8; }
-.option-top { display: flex; justify-content: space-between; align-items: flex-start; }
-.option-letter {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 30px;
-    color: #C9A96E;
-    line-height: 1;
-}
-.option-tag {
-    font-size: 9px;
-    letter-spacing: .3em;
-    text-transform: uppercase;
-    color: rgba(240,237,232,.7);
-    background: rgba(0,0,0,.4);
-    padding: 7px 13px;
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(240,237,232,.18);
-    font-weight: 500;
-}
-.option-bottom {}
-.option-swatches { display: flex; gap: 4px; margin-bottom: 18px; }
-.swatch { width: 22px; height: 22px; border: 1px solid rgba(240,237,232,.2); }
-.option-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 400;
-    line-height: 1.05;
-    margin-bottom: 12px;
-    color: #FFFFFF;
-}
-.option-name em { font-style: italic; color: #C9A96E; font-weight: 400; }
-.option-desc {
-    font-size: 13.5px;
-    color: rgba(240,237,232,.72);
-    line-height: 1.65;
-    margin-bottom: 20px;
-    max-width: 340px;
-}
-.option-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    margin-bottom: 24px;
-    font-size: 11px;
-    color: rgba(240,237,232,.55);
-    letter-spacing: .04em;
-}
-.option-meta-row { display: flex; gap: 8px; }
-.option-meta-key { color: #C9A96E; min-width: 78px; letter-spacing: .12em; text-transform: uppercase; font-size: 10px; font-weight: 500; }
-.option-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 11px;
-    letter-spacing: .25em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    border-bottom: 1px solid #C9A96E;
-    padding-bottom: 6px;
-    align-self: flex-start;
-    transition: color .25s ease;
-}
-.option:hover .option-cta { color: #C9A96E; }
-
-/* OPTION-SPECIFIC IMG */
-.option-a .option-img { background-image: url('assets/img/a/nomad-night.jpg'); }
-.option-b .option-img { background-image: url('assets/img/b/sabine-beach.webp'); }
-.option-c .option-img { background-image: url('assets/img/c/cibo-architectural.jpg'); }
-
-/* FOOTER */
-.foot {
-    text-align: center;
-    padding: 60px 24px 60px;
-    border-top: 1px solid rgba(240,237,232,.08);
-    color: rgba(240,237,232,.45);
-    font-size: 12px;
-    letter-spacing: .04em;
-}
-.foot a { color: #C9A96E; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
-.foot a:hover { border-bottom-color: #C9A96E; }
-.foot-legal {
-    margin-top: 14px;
-    font-size: 11px;
-    color: rgba(240,237,232,.35);
-    letter-spacing: .02em;
-}
-
-/* RESPONSIVE */
-@media (min-width: 720px) {
-    .options-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (min-width: 1024px) {
-    .options-grid { grid-template-columns: 1fr 1fr 1fr; }
-}
-</style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FFFFFF'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='18' fill='%23111111' text-anchor='middle' font-style='italic'%3EC%3C/text%3E%3C/svg%3E">
 </head>
 <body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
-<header class="minibar">
-    <a href="./" class="minibar-brand">ANGIMEN <em>holding</em></a>
-    <nav class="minibar-langs" aria-label="Idiomas">
-        <a href="./" class="active">ES</a>
-        <a href="./en/">EN</a>
-    </nav>
+<header class="topbar on-dark-hero" id="topbar">
+    <div class="topbar-inner">
+        <a href="./" class="topbar-brand">Angimen <em>Holding</em></a>
+        <nav class="topbar-nav" id="topbarNav" aria-label="Principal">
+            <a href="#areas">Áreas</a>
+            <a href="#portfolio">Trabajos</a>
+            <a href="#historia">Historia</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="topbar-right">
+            <nav class="topbar-langs" aria-label="Idiomas">
+                <a href="./" class="active">ES</a>
+                <a href="en/">EN</a>
+            </nav>
+            
+            <button type="button" class="topbar-burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="topbarNav"><span></span><span></span><span></span></button>
+        </div>
+    </div>
 </header>
 
-<div class="head">
-    <span class="eyebrow">— Tres propuestas para tu web —</span>
-    <h1>Tres direcciones visuales,<br><em>una sola web.</em></h1>
-    <p>
-        Hemos preparado tres direcciones visuales con identidad propia para tu web.
-        Cada una propone una paleta, una tipografía y una estructura distinta.
-        Échales un vistazo y dinos cuál te encaja mejor.
-    </p>
-    <div class="head-note">
-        <strong>Hay más opciones disponibles.</strong> Si ninguna de las tres te encaja del todo,
-        podemos preparar más propuestas con otras paletas, estructuras o referencias visuales.
-        Estas son las 3 que hemos seleccionado para arrancar.
+<main id="main">
+
+<!-- HERO Archidomo full-bleed -->
+<section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+        <img src="assets/img/c/cibo-architectural.jpg" alt="" loading="eager">
+    </div>
+    <div class="hero-content">
+        <span class="hero-eyebrow">— Marbella · Puerto Banús · Golden Mile —</span>
+        <h1>Más de 40 años<br>cuidando propiedades<br>de <em>alto nivel.</em></h1>
+        <p class="hero-tagline">
+            Property Management, Construction &amp; Maintenance.
+            Un único interlocutor local en Marbella para coordinar cada detalle.
+        </p>
+        <div class="hero-cta">
+            <a href="#contacto" class="btn btn-light">Reservar consulta privada</a>
+            <a href="#portfolio" class="btn btn-outline-light">Ver trabajos</a>
+        </div>
+    </div>
+    <div class="hero-meta">
+        <div class="hero-meta-item">
+            <span class="hero-meta-key">Sector</span>
+            <span class="hero-meta-val">Property Management</span>
+        </div>
+        <div class="hero-meta-item">
+            <span class="hero-meta-key">Ubicación</span>
+            <span class="hero-meta-val">Marbella · Costa del Sol</span>
+        </div>
+        <div class="hero-meta-item">
+            <span class="hero-meta-key">Constituida</span>
+            <span class="hero-meta-val">1996</span>
+        </div>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="section intro">
+    <div class="container-narrow fade-in">
+        <span class="eyebrow">— Tu socio de confianza en Marbella —</span>
+        <h2 style="margin-top:24px">Una propiedad en Marbella<br><em>requiere experiencia local.</em></h2>
+        <p class="lead">
+            Comprar, vender, reformar o mantener una propiedad en Marbella requiere experiencia local,
+            buenos contactos y una coordinación precisa.
+        </p>
+        <p>
+            En Angimen Holding te acompañamos en todo el proceso: búsqueda de la propiedad, visitas, compra,
+            reforma, diseño, puesta a punto, mantenimiento, gestión diaria y futura venta.
+            Un único interlocutor para coordinar cada detalle.
+        </p>
+        <div class="intro-meta">
+            <div class="intro-meta-row"><span class="intro-meta-key">Servicios</span><span class="intro-meta-val">Property Management</span></div>
+            <div class="intro-meta-row"><span class="intro-meta-key">+</span><span class="intro-meta-val">Construction &amp; Renovation</span></div>
+            <div class="intro-meta-row"><span class="intro-meta-key">+</span><span class="intro-meta-val">Maintenance</span></div>
+            <div class="intro-meta-row"><span class="intro-meta-key">+</span><span class="intro-meta-val">Real Estate Support</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ÁREAS Archidomo: rows numeradas -->
+<section class="section services" id="areas">
+    <div class="container">
+        <div class="services-header fade-in">
+            <span class="eyebrow">— Áreas de especialización —</span>
+            <h2>Todo lo que necesita tu propiedad,<br><em>coordinado desde un único punto.</em></h2>
+            <p>Acompañamiento inmobiliario, gestión, construcción, reforma, mantenimiento y soporte local. Villas, apartamentos, comunidades, restaurantes, gimnasios o beach clubs.</p>
+        </div>
+
+        <article class="service-row fade-in">
+            <div class="service-row-num">01</div>
+            <div class="service-row-content">
+                <h3>House <em>Management</em></h3>
+                <p>Gestión diaria de propiedades premium para que todo funcione, se mantenga y esté siempre en buen estado. Comunidades de lujo, fincas privadas y villas. Supervisión periódica, coordinación de proveedores, control de incidencias y comunicación directa con propietarios.</p>
+                <div class="service-row-tags">
+                    <span class="service-row-tag">Comunidades</span>
+                    <span class="service-row-tag">Villas privadas</span>
+                    <span class="service-row-tag">Coordinación</span>
+                    <span class="service-row-tag">Revisiones</span>
+                    <span class="service-row-tag">Incidencias</span>
+                    <span class="service-row-tag">Reporting</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="service-row fade-in">
+            <div class="service-row-num">02</div>
+            <div class="service-row-content">
+                <h3>Construcción <em>y Reforma</em></h3>
+                <p>Coordinamos obras, reformas y mejoras con visión práctica, estética y orientada al resultado, desde la ejecución técnica hasta la entrega final. Proyectos residenciales y comerciales en villas, apartamentos, fachadas, restaurantes, beach clubs, gimnasios y espacios comerciales.</p>
+                <div class="service-row-tags">
+                    <span class="service-row-tag">Villas</span>
+                    <span class="service-row-tag">Apartamentos</span>
+                    <span class="service-row-tag">Fachadas</span>
+                    <span class="service-row-tag">Restaurantes</span>
+                    <span class="service-row-tag">Beach Clubs</span>
+                    <span class="service-row-tag">Comerciales</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="service-row fade-in">
+            <div class="service-row-num">03</div>
+            <div class="service-row-content">
+                <h3>Mantenimiento <em>integral</em></h3>
+                <p>Una propiedad de alto nivel necesita atención constante. Organizamos el mantenimiento preventivo y resolvemos incidencias para conservar su valor, imagen y funcionamiento. Jardines, piscinas, electricidad, instalaciones y reparaciones generales.</p>
+                <div class="service-row-tags">
+                    <span class="service-row-tag">Jardines</span>
+                    <span class="service-row-tag">Piscinas</span>
+                    <span class="service-row-tag">Electricidad</span>
+                    <span class="service-row-tag">Reparaciones</span>
+                    <span class="service-row-tag">Preventivo</span>
+                    <span class="service-row-tag">Urgencias</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="service-row fade-in">
+            <div class="service-row-num">04</div>
+            <div class="service-row-content">
+                <h3>Soporte <em>Inmobiliario</em></h3>
+                <p>Para propietarios internacionales que necesitan un partner en Marbella. Te acompañamos antes, durante y después de la compra, haciendo que cada paso sea más claro, sencillo y bien coordinado. Búsqueda, visitas, asesoramiento, decoración y preparación para alquiler o venta.</p>
+                <div class="service-row-tags">
+                    <span class="service-row-tag">Búsqueda</span>
+                    <span class="service-row-tag">Visitas</span>
+                    <span class="service-row-tag">Asesoramiento</span>
+                    <span class="service-row-tag">Decoración</span>
+                    <span class="service-row-tag">Coordinación</span>
+                    <span class="service-row-tag">Alquiler/venta</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- PORTFOLIO Archidomo editorial grid -->
+<section class="section portfolio" id="portfolio">
+    <div class="container">
+        <div class="portfolio-header fade-in">
+            <span class="eyebrow">— Nuestros trabajos —</span>
+            <h2>Espacios <em>residenciales y comerciales</em><br>en Marbella y la Costa del Sol.</h2>
+            <p>Una selección de trabajos en restaurantes, beach clubs, villas, comunidades, fachadas, jardines, piscinas, gimnasios y espacios comerciales.</p>
+        </div>
+
+        <div class="portfolio-filters fade-in" role="tablist">
+            <button class="portfolio-filter active" data-filter="all">Todos</button>
+            <button class="portfolio-filter" data-filter="restaurantes">Restaurantes</button>
+            <button class="portfolio-filter" data-filter="beachclubs">Beach Clubs</button>
+            <button class="portfolio-filter" data-filter="villas">Villas</button>
+            <button class="portfolio-filter" data-filter="apartamentos">Apartamentos</button>
+            <button class="portfolio-filter" data-filter="exteriores">Jardines &amp; Piscinas</button>
+            <button class="portfolio-filter" data-filter="fachadas">Fachadas</button>
+            <button class="portfolio-filter" data-filter="wellness">Gimnasios &amp; Wellness</button>
+            <button class="portfolio-filter" data-filter="comerciales">Espacios Comerciales</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <article class="portfolio-item" data-cat="restaurantes" data-name="Cibo" data-loc="Puerto Banús, Marbella" data-work="Reforma · Coordinación técnica" data-desc="Reforma del local con foco en la imagen visual y funcionamiento diario. Coordinación técnica de instalaciones y supervisión de la entrega final del proyecto." data-img="../assets/img/c/cibo-architectural.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/cibo-architectural.jpg" alt="Cibo" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Cibo</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Puerto Banús · Marbella</span>
+                            <span>Reforma · Coordinación</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Restaurante</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="restaurantes" data-name="Leone" data-loc="Puerto Banús, Marbella" data-work="Reforma · Coordinación técnica" data-desc="Reforma integral del local con ajustes en distribución, iluminación y acabados. Coordinación de proveedores y entrega final preparada para apertura." data-img="../assets/img/c/leone-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/leone-interior.jpg" alt="Leone" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Leone</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Puerto Banús · Marbella</span>
+                            <span>Reforma · Coordinación</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Restaurante</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="restaurantes" data-name="Nomad" data-loc="Puerto Banús, Marbella" data-work="Reforma · Coordinación" data-desc="Reforma con identidad visual cuidada y coordinación técnica de iluminación exterior. Adaptación de la fachada y espacios anexos al concepto del restaurante." data-img="../assets/img/c/nomad-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/nomad-interior.jpg" alt="Nomad" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Nomad</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Puerto Banús · Marbella</span>
+                            <span>Reforma · Coordinación</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Restaurante</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="restaurantes" data-name="Jacks" data-loc="Marbella" data-work="Reforma · Mantenimiento" data-desc="Reforma del local y plan de mantenimiento continuo. Coordinación de proveedores y supervisión de incidencias para mantener la operativa diaria sin interrupciones." data-img="../assets/img/c/jacks-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/jacks-interior.jpg" alt="Jacks" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Jacks</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Marbella</span>
+                            <span>Reforma · Mantenimiento</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Restaurante</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="restaurantes" data-name="Chow" data-loc="Puerto Banús, Marbella" data-work="Coordinación técnica" data-desc="Coordinación técnica de mejoras estructurales y revisión de instalaciones. Adaptación de espacios al uso diario del negocio gastronómico." data-img="../assets/img/c/chow-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/chow-interior.jpg" alt="Chow" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Chow</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Puerto Banús · Marbella</span>
+                            <span>Coordinación técnica</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Restaurante</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="restaurantes" data-name="Koi" data-loc="Puerto Banús, Marbella" data-work="Reforma · Coordinación" data-desc="Reforma integral con foco en la experiencia gastronómica japonesa. Coordinación de carpintería, iluminación y materiales nobles para el ambiente del local." data-img="../assets/img/c/koi-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/koi-interior.jpg" alt="Koi" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Koi</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Puerto Banús · Marbella</span>
+                            <span>Reforma · Coordinación</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Restaurante</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="beachclubs" data-name="Nomad Beach" data-loc="Marbella" data-work="Reforma · Mantenimiento exterior" data-desc="Reforma del beach club con foco en zonas exteriores. Mantenimiento estacional de mobiliario, iluminación y estructuras. Preparación de temporada." data-img="../assets/img/c/nomad-architectural.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/nomad-architectural.jpg" alt="Nomad Beach" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Nomad Beach</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Marbella</span>
+                            <span>Reforma · Mantenimiento</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Beach Club</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="villas" data-name="Villa Golden Mile" data-loc="Golden Mile, Marbella" data-work="House Management · Mantenimiento integral" data-desc="Supervisión periódica de la propiedad, coordinación de jardinería y piscina, control de incidencias y preparación antes de la llegada del propietario. Gestión durante todo el año." data-img="../assets/img/c/cibo-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/cibo-interior.jpg" alt="Villa Golden Mile" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Villa Golden Mile</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Golden Mile · Marbella</span>
+                            <span>House Management</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Villa privada</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="apartamentos" data-name="Apartamento Puerto Banús" data-loc="Puerto Banús, Marbella" data-work="Reforma · Decoración" data-desc="Reforma parcial con actualización de cocina, baños y zonas comunes. Decoración y puesta a punto para alquiler vacacional. Coordinación con plazos definidos." data-img="../assets/img/c/koi-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/koi-interior.jpg" alt="Apartamento" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Apartamento Banús</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Puerto Banús · Marbella</span>
+                            <span>Reforma · Decoración</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Apartamento</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="exteriores" data-name="Jardines Sierra Blanca" data-loc="Sierra Blanca, Marbella" data-work="Mantenimiento · Diseño exterior" data-desc="Mantenimiento integral de jardines, sistema de riego y zona de piscina. Coordinación de pintura, carpintería exterior y revisión estacional de incidencias." data-img="../assets/img/c/leone-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/leone-interior.jpg" alt="Jardines Sierra Blanca" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Jardines Sierra Blanca</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Sierra Blanca · Marbella</span>
+                            <span>Mantenimiento · Exterior</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Jardines</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="fachadas" data-name="Fachada Edificio Centro" data-loc="Marbella centro" data-work="Pintura · Reparación" data-desc="Pintura y reparación de fachada principal. Revisión de humedades y desperfectos, coordinación de trabajos verticales y mejora estética de accesos." data-img="../assets/img/c/cibo-architectural.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/cibo-architectural.jpg" alt="Fachada" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Fachada Edificio Centro</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Marbella centro</span>
+                            <span>Pintura · Reparación</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Fachada</span>
+                </div>
+            </article>
+            <article class="portfolio-item" data-cat="comerciales" data-name="Local Comercial Banús" data-loc="Puerto Banús, Marbella" data-work="Reforma · Coordinación" data-desc="Reforma del espacio comercial con adaptación al uso diario del negocio. Coordinación de instalaciones eléctricas, climatización y supervisión técnica de la entrega." data-img="../assets/img/c/jacks-interior.jpg">
+                <div class="portfolio-item-img"><img src="assets/img/c/jacks-interior.jpg" alt="Local Comercial" loading="lazy"></div>
+                <div class="portfolio-item-info">
+                    <div>
+                        <h4 class="portfolio-item-name">Local Comercial Banús</h4>
+                        <div class="portfolio-item-meta">
+                            <span>Puerto Banús · Marbella</span>
+                            <span>Reforma · Coordinación</span>
+                        </div>
+                    </div>
+                    <span class="portfolio-item-cat-tag">Espacio Comercial</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- HISTORIA dark -->
+<section class="section story" id="historia">
+    <div class="container">
+        <div class="story-grid">
+            <div class="story-img fade-in">
+                <img src="assets/img/c/cibo-architectural.jpg" alt="" loading="lazy">
+            </div>
+            <div class="story-text fade-in">
+                <span class="eyebrow">— Nuestra historia —</span>
+                <h2>Construido sobre <em>40 años</em><br>de experiencia.</h2>
+                <p>Angimen Holding nace de una trayectoria de más de cuatro décadas vinculada al sector inmobiliario, la construcción, la reforma y el mantenimiento de propiedades en Marbella y la Costa del Sol.</p>
+                <p>Hemos trabajado junto a propietarios, comunidades, negocios y clientes internacionales que necesitaban algo más que un proveedor: necesitaban a alguien local, serio y capaz de coordinar cada detalle.</p>
+                <p>Conocemos Marbella, sus zonas más exclusivas, sus propiedades, sus ritmos y sus exigencias. También a los profesionales adecuados para ejecutar cada trabajo con criterio y discreción.</p>
+                <div class="story-stats">
+                    <div><div class="story-stat-num">1996</div><div class="story-stat-label">Sociedad constituida</div></div>
+                    <div><div class="story-stat-num">29602</div><div class="story-stat-label">Marbella · Málaga</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section process" id="proceso">
+    <div class="container">
+        <div class="process-header fade-in">
+            <span class="eyebrow">— Cómo trabajamos —</span>
+            <h2>Un acompañamiento <em>cercano,<br>discreto y profesional.</em></h2>
+            <p>Para que tu propiedad avance siempre en la dirección correcta.</p>
+        </div>
+        <div class="process-grid fade-in">
+            <div class="process-step"><div class="process-step-num">01</div><div><h4>Te escuchamos</h4><p>Entendemos qué necesitas, qué te preocupa y qué objetivo tienes con la propiedad: comprar, reformar, mantener, gestionar o preparar para vender.</p></div></div>
+            <div class="process-step"><div class="process-step-num">02</div><div><h4>Ponemos orden</h4><p>Revisamos la situación, detectamos prioridades y definimos qué conviene hacer primero para evitar decisiones improvisadas.</p></div></div>
+            <div class="process-step"><div class="process-step-num">03</div><div><h4>Diseñamos el plan</h4><p>Preparamos una propuesta clara, realista y adaptada a tu propiedad, con acciones concretas, tiempos y profesionales necesarios.</p></div></div>
+            <div class="process-step"><div class="process-step-num">04</div><div><h4>Coordinamos por ti</h4><p>Organizamos proveedores, equipos técnicos, visitas, trabajos e incidencias para que no tengas que estar detrás de cada detalle.</p></div></div>
+            <div class="process-step"><div class="process-step-num">05</div><div><h4>Supervisamos cada fase</h4><p>Controlamos la ejecución, revisamos los avances y mantenemos comunicación directa para que sepas siempre en qué punto está todo.</p></div></div>
+            <div class="process-step"><div class="process-step-num">06</div><div><h4>Cuidamos en el tiempo</h4><p>Una vez terminado el trabajo, podemos seguir acompañándote en la gestión, mantenimiento y puesta a punto durante todo el año.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- CUÉNTANOS -->
+<section class="section cuentanos">
+    <div class="container-narrow fade-in">
+        <span class="eyebrow">— Cuéntanos tu proyecto —</span>
+        <h2 style="margin-top:24px">Villas privadas, comunidades, restaurantes,<br><em>gimnasios y espacios comerciales.</em></h2>
+        <p>Angimen Holding te ofrece un partner local con experiencia para buscar, comprar, reformar, diseñar, gestionar, mantener y preparar tu propiedad para la venta. Un único punto de contacto para cuidar cada detalle con criterio, discreción y seguimiento profesional.</p>
+        <div class="cuentanos-cta"><a href="#contacto" class="btn btn-light">Reserva una consulta privada</a></div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="section contact" id="contacto">
+    <div class="container">
+        <div class="contact-header fade-in">
+            <span class="eyebrow">— Reserva una consulta privada —</span>
+            <h2>Estamos <em>deseando</em> conocerte.</h2>
+            <p>Te respondemos en 24h con una primera valoración del proyecto.</p>
+        </div>
+
+        <div class="contact-grid fade-in">
+            <aside class="contact-info">
+                <div class="contact-info-row"><span class="eyebrow">Dirección</span><p>Supermanzana J K L<br>29660 Nueva Andalucía<br>Marbella, Málaga</p></div>
+                <div class="contact-info-row"><span class="eyebrow">Teléfono</span><p><a href="tel:+34952815350">+34 952 81 53 50</a></p></div>
+                <div class="contact-info-row"><span class="eyebrow">Email</span><p><a href="mailto:info@angimenholding.com">info@angimenholding.com</a></p></div>
+                <div class="contact-info-row"><span class="eyebrow">Horario</span><p>Lunes a viernes<br>9:00 – 19:00</p></div>
+            </aside>
+
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row-double">
+                    <div class="form-row"><label for="name">Nombre</label><input type="text" id="name" name="name" required autocomplete="name"></div>
+                    <div class="form-row"><label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email"></div>
+                </div>
+                <div class="form-row-double">
+                    <div class="form-row"><label for="phone">Teléfono</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+                    <div class="form-row"><label for="contact-method">Método de contacto preferido</label>
+                        <select id="contact-method" name="contact-method">
+                            <option value="email">Email</option><option value="phone">Teléfono</option><option value="whatsapp">WhatsApp</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row"><label for="project-type">Tipo de proyecto</label>
+                    <select id="project-type" name="project-type" required>
+                        <option value="">Selecciona</option>
+                        <option>House Management</option><option>Villa Management</option>
+                        <option>Construcción / Reforma</option><option>Mantenimiento</option>
+                        <option>Restaurante / Espacio comercial</option><option>Otro</option>
+                    </select>
+                </div>
+                <div class="form-row"><label for="location">Ubicación de la propiedad</label><input type="text" id="location" name="location" placeholder="Marbella, Puerto Banús, Golden Mile..."></div>
+                <div class="form-row"><label for="message">Mensaje</label><textarea id="message" name="message" rows="4" required></textarea></div>
+                <div class="form-submit"><button type="submit">Enviar solicitud</button></div>
+                <p class="form-note">Tu información se trata con la máxima discreción.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button type="button" class="lb-close" id="lbClose" aria-label="Cerrar">×</button>
+    <div class="lb-content">
+        <div class="lb-img"><img id="lbImg" src="" alt=""></div>
+        <div class="lb-text">
+            <div class="lb-cat" id="lbCat"></div>
+            <h3 class="lb-title" id="lbTitle"></h3>
+            <div class="lb-meta">
+                <div class="lb-meta-row"><span class="lb-meta-key">Proyecto</span><span class="lb-meta-val" id="lbProject"></span></div>
+                <div class="lb-meta-row"><span class="lb-meta-key">Ubicación</span><span class="lb-meta-val" id="lbLoc"></span></div>
+                <div class="lb-meta-row"><span class="lb-meta-key">Trabajo</span><span class="lb-meta-val" id="lbWork"></span></div>
+            </div>
+            <p class="lb-desc" id="lbDesc"></p>
+        </div>
     </div>
 </div>
 
-<div class="options-grid">
-
-    <a href="a/" class="option option-a">
-        <div class="option-img"></div>
-        <div class="option-content">
-            <div class="option-top">
-                <span class="option-letter">A</span>
-                <span class="option-tag">Marbella Authority</span>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">Angimen <em>Holding</em></div>
+                <p class="footer-tagline">Property Management · Construction · Renovation · Maintenance.<br>Marbella · Puerto Banús · Golden Mile.</p>
             </div>
-            <div class="option-bottom">
-                <div class="option-swatches">
-                    <span class="swatch" style="background:#0A0A0A"></span>
-                    <span class="swatch" style="background:#F5F5F0"></span>
-                    <span class="swatch" style="background:#C9A96E"></span>
-                    <span class="swatch" style="background:#1A1A18"></span>
-                </div>
-                <h2 class="option-name">Marbella<br><em>Authority</em></h2>
-                <p class="option-desc">Carbon + dorado, split editorial. Autoridad institucional. Estética premium reconocible en el mercado luxury Marbella.</p>
-                <div class="option-meta">
-                    <div class="option-meta-row"><span class="option-meta-key">Paleta</span><span>Carbon + crema + dorado</span></div>
-                    <div class="option-meta-row"><span class="option-meta-key">Tipografía</span><span>Cormorant Garamond + Inter</span></div>
-                    <div class="option-meta-row"><span class="option-meta-key">Vibe</span><span>Authority · Premium · Conservador</span></div>
-                </div>
-                <span class="option-cta">Ver propuesta A →</span>
+            <div class="footer-col"><h5>Servicios</h5><a href="#areas">House Management</a><a href="#areas">Construcción y Reforma</a><a href="#areas">Mantenimiento</a><a href="#areas">Soporte Inmobiliario</a></div>
+            <div class="footer-col"><h5>Compañía</h5><a href="#historia">Historia</a><a href="#proceso">Cómo trabajamos</a><a href="#portfolio">Trabajos</a><a href="#contacto">Contacto</a></div>
+            <div class="footer-col">
+                <h5>Contacto</h5>
+                <a href="tel:+34952815350">+34 952 81 53 50</a>
+                <a href="mailto:info@angimenholding.com">info@angimenholding.com</a>
+                <p>Supermanzana J K L<br>29660 Nueva Andalucía, Marbella</p>
+                <p class="footer-legal">Angimen Holding Investment SL · CIF B29800505 · Constituida en 1996</p>
             </div>
         </div>
-    </a>
-
-    <a href="b/" class="option option-b">
-        <div class="option-img"></div>
-        <div class="option-content">
-            <div class="option-top">
-                <span class="option-letter">B</span>
-                <span class="option-tag">Wellness Estate</span>
-            </div>
-            <div class="option-bottom">
-                <div class="option-swatches">
-                    <span class="swatch" style="background:#162D24"></span>
-                    <span class="swatch" style="background:#1B4732"></span>
-                    <span class="swatch" style="background:#B89968"></span>
-                    <span class="swatch" style="background:#F5F0E8"></span>
-                </div>
-                <h2 class="option-name">Wellness<br><em>Estate</em></h2>
-                <p class="option-desc">Verde bosque + bronce. Portales arqueados, full-bleed inmersivo. La opción más diferenciadora del mercado.</p>
-                <div class="option-meta">
-                    <div class="option-meta-row"><span class="option-meta-key">Paleta</span><span>Verde bosque + bronce + crema</span></div>
-                    <div class="option-meta-row"><span class="option-meta-key">Tipografía</span><span>Cormorant Garamond + Inter</span></div>
-                    <div class="option-meta-row"><span class="option-meta-key">Vibe</span><span>Sereno · Mediterráneo · Wellness</span></div>
-                </div>
-                <span class="option-cta">Ver propuesta B →</span>
-            </div>
+        <div class="footer-bottom">
+            <span>© 2026 Angimen Holding Investment SL · Todos los derechos reservados</span>
+            <div class="footer-bottom-links"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a></div>
         </div>
-    </a>
+    </div>
+</footer>
 
-    <a href="c/" class="option option-c">
-        <div class="option-img"></div>
-        <div class="option-content">
-            <div class="option-top">
-                <span class="option-letter">C</span>
-                <span class="option-tag">Editorial Architecture</span>
-            </div>
-            <div class="option-bottom">
-                <div class="option-swatches">
-                    <span class="swatch" style="background:#FFFFFF"></span>
-                    <span class="swatch" style="background:#0A0A0A"></span>
-                    <span class="swatch" style="background:#111111"></span>
-                    <span class="swatch" style="background:#FAFAF8"></span>
-                </div>
-                <h2 class="option-name">Editorial<br><em>Architecture</em></h2>
-                <p class="option-desc">Bicolor absoluto B&amp;N. Whitespace generoso. La fotografía hace el trabajo. Firma de arquitecto, no agencia.</p>
-                <div class="option-meta">
-                    <div class="option-meta-row"><span class="option-meta-key">Paleta</span><span>Blanco + negro absoluto</span></div>
-                    <div class="option-meta-row"><span class="option-meta-key">Tipografía</span><span>Cormorant Garamond + Inter</span></div>
-                    <div class="option-meta-row"><span class="option-meta-key">Vibe</span><span>Editorial · Minimalista · Atemporal</span></div>
-                </div>
-                <span class="option-cta">Ver propuesta C →</span>
-            </div>
-        </div>
-    </a>
-
-</div>
-
-<div class="foot">
-    Echa un vistazo a las tres y elige la dirección que más te encaja.<br>
-    Después la pulimos juntos · <a href="mailto:info@angimenholding.com">info@angimenholding.com</a>
-    <div class="foot-legal">Angimen Holding Investment SL · CIF B29800505 · Marbella · Costa del Sol</div>
-</div>
-
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
