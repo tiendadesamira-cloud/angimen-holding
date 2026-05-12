@@ -1,2 +1,12 @@
+# Angimen Holding — robots.txt
+# Pre-producción: bloqueado. En deploy real: cambiar el Disallow por Allow y descomentar Sitemap.
+
 User-agent: *
 Disallow: /
+
+# Configuración para producción:
+# User-agent: *
+# Allow: /
+# Disallow: /assets/js/
+#
+# Sitemap: https://angimenholding.com/sitemap.xml

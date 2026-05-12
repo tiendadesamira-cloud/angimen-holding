@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://angimenholding.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angimenholding.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angimenholding.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://angimenholding.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angimenholding.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://angimenholding.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angimenholding.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angimenholding.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://angimenholding.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angimenholding.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://angimenholding.com/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://angimenholding.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://angimenholding.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://angimenholding.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://angimenholding.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Subpáginas FASE 2 - se añadirán cuando estén creadas -->
+  <!--
+  <url><loc>https://angimenholding.com/reformas/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/reformas/villas-marbella/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/reformas/villas-puerto-banus/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/reformas/villas-golden-mile/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/reformas/villas-sierra-blanca/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/reformas/villas-la-zagaleta/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/reformas/villas-nueva-andalucia/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/reformas/villas-benahavis/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/reformas/apartamentos-marbella/</loc><priority>0.8</priority></url>
+  <url><loc>https://angimenholding.com/reformas/fachadas-marbella/</loc><priority>0.8</priority></url>
+  <url><loc>https://angimenholding.com/reformas/restaurantes-beach-clubs-marbella/</loc><priority>0.8</priority></url>
+  <url><loc>https://angimenholding.com/reformas/piscinas-marbella/</loc><priority>0.8</priority></url>
+  <url><loc>https://angimenholding.com/mantenimiento/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/mantenimiento/villas-marbella/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/mantenimiento/piscinas-marbella/</loc><priority>0.8</priority></url>
+  <url><loc>https://angimenholding.com/mantenimiento/jardines-marbella/</loc><priority>0.8</priority></url>
+  <url><loc>https://angimenholding.com/mantenimiento/urgencias-24h-marbella/</loc><priority>0.8</priority></url>
+  <url><loc>https://angimenholding.com/property-management/</loc><priority>0.9</priority></url>
+  <url><loc>https://angimenholding.com/proyectos/</loc><priority>0.8</priority></url>
+  <url><loc>https://angimenholding.com/zonas/marbella/</loc><priority>0.7</priority></url>
+  <url><loc>https://angimenholding.com/zonas/puerto-banus/</loc><priority>0.7</priority></url>
+  <url><loc>https://angimenholding.com/zonas/golden-mile/</loc><priority>0.7</priority></url>
+  <url><loc>https://angimenholding.com/zonas/sierra-blanca/</loc><priority>0.7</priority></url>
+  <url><loc>https://angimenholding.com/zonas/la-zagaleta/</loc><priority>0.7</priority></url>
+  <url><loc>https://angimenholding.com/zonas/nueva-andalucia/</loc><priority>0.7</priority></url>
+  <url><loc>https://angimenholding.com/zonas/benahavis/</loc><priority>0.7</priority></url>
+  <url><loc>https://angimenholding.com/sobre-nosotros/</loc><priority>0.6</priority></url>
+  <url><loc>https://angimenholding.com/contacto/</loc><priority>0.6</priority></url>
+  -->
+
+</urlset>
