@@ -396,10 +396,10 @@ p.lead { font-size: clamp(19px, 2vw, 24px); line-height: 1.5; color: var(--text)
 .origin h2 em { font-style: italic; font-weight: 200; color: var(--accent-soft); }
 .origin p { color: rgba(244,237,224,.82); margin-bottom: 22px; font-size: clamp(16px, 1.6vw, 19px); }
 /* George Kahil portrait */
-.origin-portrait { margin: 40px auto 50px; max-width: 320px; padding: 0; }
-.origin-portrait img { width: 100%; height: auto; border-radius: 50%; aspect-ratio: 1/1; object-fit: cover; box-shadow: 0 12px 40px rgba(0,0,0,.45); filter: brightness(1.02); }
+.origin-portrait { margin: 40px auto 50px; max-width: 420px; padding: 0; }
+.origin-portrait img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 16px 50px rgba(0,0,0,.45); }
 .origin-portrait figcaption { display: block; margin-top: 18px; font-family: var(--serif); font-style: italic; font-size: 13.5px; color: rgba(244,237,224,.6); letter-spacing: .03em; }
-@media (max-width: 700px) { .origin-portrait { max-width: 240px; margin: 32px auto 40px; } }
+@media (max-width: 700px) { .origin-portrait { max-width: 320px; margin: 32px auto 40px; } }
 
 /* Portfolio placeholder (proyectos privados sin foto) */
 .portfolio-item-pending { pointer-events: none; }
